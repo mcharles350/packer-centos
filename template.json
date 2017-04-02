@@ -1,0 +1,89 @@
+{
+  "description" : "CentOS7 AMI 2016.09.0 HVM",
+  "min_packer_version" : "0.12.1",
+
+  "_comment" : "Build Section",
+  "builders" : [
+    {
+      "type" : "amazon-ebs",
+
+      "access_key" : "{{user `aws_access_key`}}",
+      "secret_key" : "{{user `aws_secret_key`}}",
+
+      "ami_virtualization_type" : "hvm",
+
+      "associate_public_ip_address" : false,
+      "region" : "{{user `region`}}",
+	    "vpc_id" : "{{user `vpc_id`}}",
+	    "subnet_id" : "{{user `subnet_id`}}",
+      "availability_zone" : "{{user `availability_zone`}}",
+      "security_group_id" : "{{user `security_group`}}",
+
+      "ami_name"  : "CentOS7-{{isotime \"2006-01-02\"}}",
+      "source_ami" :  "",
+      "source_ami_filter": {
+        "filters": {
+          "virtualization-type": "hvm",
+          "name": "*CentOS Linux 7 x86_64 HVM EBS*",
+          "root-device-type": "ebs"
+        },
+        "owners": ["679593333241"],
+        "most_recent": true
+      },
+      "instance_type" : "t2.large",
+      "launch_block_device_mappings"  : [
+        {
+            "device_name" : "/dev/sda1",
+            "volume_size" : 50,
+            "volume_type" : "gp2",
+            "delete_on_termination" : true
+        }
+      ],
+
+      "communicator" : "ssh",
+      "ssh_timeout" : "20m",
+      "ssh_pty" : true,
+      "ssh_username" : "centos",
+      "ssh_keypair_name" : "",
+      "ssh_private_ip"  : true,
+      "ssh_private_key_file" : "",
+      "temporary_key_pair_name" : "{{user `temporary_key_pair_name`}}",
+      "shutdown_behavior"  : "stop",
+
+      "run_tags"  : {
+        "Name" : "CentOS7-{{isotime \"2006-01-02\"}}",
+        "Cost Center" : "N/A",
+        "Customer Facing" : "No",
+        "Environment" : "QA",
+        "Role" : "AMI",
+        "Service" : "AMI",
+        "Support Team" : "",
+        "OS" : "CentOS 7"
+      },
+
+      "tags"  : {
+        "Name" : "CentOS7-{{isotime \"2006-01-02\"}}",
+        "Cost Center" : "N/A",
+        "Customer Facing" : "No",
+        "Environment" : "QA",
+        "Role" : "AMI",
+        "Service" : "AMI",
+        "Support Team" : "",
+        "OS" : "CentOS 7"
+      },
+
+      "ami_description" : "",
+
+      "ami_name" : "CentOS7-{{isotime \"2006-01-02\"}}"
+    }
+  ],
+
+  "_comment" : "Provisioner Section",
+  "provisioners": [
+    {
+      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}",
+      "type" : "shell",
+      "script" : "scripts/scriptpup3-8.sh"
+    }
+  ]
+}

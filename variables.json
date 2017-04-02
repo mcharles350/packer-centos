@@ -1,0 +1,10 @@
+{
+  "vpc_id" : "vpc-f33c8e96",
+  "subnet_id" : "subnet-17ade53c",
+  "security_group" : "sg-8cafb6eb",
+  "region" : "us-east-1",
+  "availability_zone" : "us-east-1e",
+  "keypair_name" : "",
+  "privite_key" :  "",
+  "temporary_key_pair_name" : ""
+},
