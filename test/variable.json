@@ -3,7 +3,7 @@
   "aws_secret_key": "",
   "vpc_id": "vpc-f33c8e96",
   "subnet_id": "subnet-17ade53c",
-  "security_group": "sg-8cafb6eb",
+  "security_group": "sg-f5de4785",
   "region": "us-east-1",
   "availability_zone": "us-east-1e",
   "keypair_name": "GICentosAMI_QA",
