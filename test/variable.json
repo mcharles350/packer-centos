@@ -7,7 +7,7 @@
   "region": "us-east-1",
   "availability_zone": "us-east-1e",
   "keypair_name": "GICentosAMI_QA",
-  "privite_key": "../../packer-keys/GICentosAMI_QA",
+  "privite_key_file": "packer-keys/GICentosAMI_QA",
   "temporary_key_pair_name": "GICentosAMI_QA"
 },
 
