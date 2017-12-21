@@ -1,0 +1,13 @@
+{
+  "aws_access_key": "",
+  "aws_secret_key": "",
+  "vpc_id": "vpc-f33c8e96",
+  "subnet_id": "subnet-17ade53c",
+  "security_group": "sg-8cafb6eb",
+  "region": "us-east-1",
+  "availability_zone": "us-east-1e",
+  "keypair_name": "GICentosAMI_QA",
+  "privite_key": "../../packer-keys/GICentosAMI_QA",
+  "temporary_key_pair_name": "GICentosAMI_QA"
+},
+
