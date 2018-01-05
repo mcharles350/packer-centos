@@ -91,7 +91,8 @@
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}",
       "type" : "shell",
       "script" : "scripts/script-pe-new.sh",
-      "pause_before": "5m",
+      "start_retry_timeout" : "10m",
+      "pause_before": "15s",
       "expect_disconnect" : true
     },
     {

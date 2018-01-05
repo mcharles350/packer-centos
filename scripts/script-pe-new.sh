@@ -86,6 +86,6 @@ rm -f ~root/anaconda-ks.cfg
 rm -f ~centos/anaconda-ks.cfg
 rm -f /home/centos/*.sh
 /bin/rm -rf $(puppet config print ssldir)
-systemctl stop network.service
-reboot
+systemctl reboot
+#reboot -f
 #poweroff
