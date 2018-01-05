@@ -86,7 +86,6 @@ rm -f ~root/anaconda-ks.cfg
 rm -f ~centos/anaconda-ks.cfg
 rm -f /home/centos/*.sh
 /bin/rm -rf $(puppet config print ssldir)
+systemctl stop network.service
 reboot
-uname -r
-rpm -q --changelog kernel | egrep 'CVE-2017-5715|CVE-2017-5753|CVE-2017-5754'
 #poweroff

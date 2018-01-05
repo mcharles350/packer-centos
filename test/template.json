@@ -91,8 +91,16 @@
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}",
       "type" : "shell",
       "script" : "scripts/script-pe-new.sh",
-      "expect_disconnect" : true,
-      "start_retry_timeout" : "8m"
+      "pause_before": "5m",
+      "expect_disconnect" : true
+    },
+    {
+      "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}",
+      "type" : "shell",
+      "inline" : [
+        "uname -r",
+        "rpm -q --changelog kernel | egrep 'CVE-2017-5715|CVE-2017-5753|CVE-2017-5754'"
+      ] 
     }
   ]
 }
