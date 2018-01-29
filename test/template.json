@@ -72,7 +72,12 @@
         "Support Team" : "techgssserver@ap.org",
         "OS" : "CentOS 7",
         "COMMENTS": "FOR TESTING PURPOSES ONLY.  DO NOT USE FOR PRODUCTION!!"        
-      }
+      },
+
+      "ami_users" : [
+        "720322524327",
+        "222259241209"
+      ]
     }
   ],
 
