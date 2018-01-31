@@ -7,6 +7,6 @@
   "region" : "us-east-1",
   "availability_zone" : "us-east-1e",
   "keypair_name" : "GICentosAMI_QA",
-  "temporary_key_pair_name" : "GIAMI_QA",
+  "temporary_key_pair_name" : "GIAMI_QA"
 },
 
