@@ -8,6 +8,5 @@
   "availability_zone" : "us-east-1e",
   "keypair_name" : "GICentosAMI_QA",
   "temporary_key_pair_name" : "GIAMI_QA",
-  "iam_role" : "packer-iam-builds"  
 },
 
