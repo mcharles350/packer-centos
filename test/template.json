@@ -43,7 +43,7 @@
 
       "communicator" : "ssh",
       "ssh_pty" : true,
-      "ssh_timeout" : "20m",
+      "ssh_timeout" : "5m",
       "ssh_username" : "centos",
       "ssh_private_ip"  : false,
       "temporary_key_pair_name" : "{{user `temporary_key_pair_name`}}",
