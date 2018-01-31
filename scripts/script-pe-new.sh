@@ -6,6 +6,14 @@ yum -y install python-setuptools
 yum -y install git
 yum -y install curl
 yum -y install unzip
+curl -O "https://d1wk0tztpsntt1.cloudfront.net/linux/latest/install"
+sudo bash install -u false
+rm install
+sudo /opt/aws/awsagent/bin/awsagent status
+curl "https://d1wk0tztpsntt1.cloudfront.net/linux/latest/inspector.gpg" > inspector.key
+gpg --import inspector.key
+curl -O "https://d1wk0tztpsntt1.cloudfront.net/linux/latest/install.sig"
+gpg --verify ./install.sig
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
 sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws

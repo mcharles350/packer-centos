@@ -1,7 +1,8 @@
 #!/bin/bash -x
+uname -r
+yum -y update
 yum -y install epel-release
 yum -y install python-setuptools
-yum -y update
 yum -y install git
 yum -y install curl
 yum -y install unzip

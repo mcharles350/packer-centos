@@ -14,7 +14,7 @@
       "force_deregister": true,
       "encrypt_boot": false,
 
-      "associate_public_ip_address" : false,
+      "associate_public_ip_address" : true,
       "region" : "{{user `region`}}",
 	    "vpc_id" : "{{user `vpc_id`}}",
 	    "subnet_id" : "{{user `subnet_id`}}",
@@ -43,7 +43,7 @@
 
       "communicator" : "ssh",
       "ssh_pty" : true,
-      "ssh_timeout" : "20m",
+      "ssh_timeout" : "5m",
       "ssh_username" : "centos",
       "ssh_private_ip"  : true,
       "temporary_key_pair_name" : "{{user `temporary_key_pair_name`}}",
@@ -114,7 +114,7 @@
     {
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}",
       "type" : "shell",
-      "script" : "scripts/script-pe-aug.sh"
+      "script" : "scripts/script-pe-new.sh"
     }
   ]
 }
