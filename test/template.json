@@ -20,7 +20,7 @@
       "security_group_id" : "{{user `security_group`}}",
 
       "ami_description": "CentOS 7 pre-baked AMI build for testing purposes",
-      "ami_name": "CentOS7-AP-TEST-p38-{{isotime \"2006-01-02\"}}",
+      "ami_name": "CentOS7-AP-TEST-pe-{{isotime \"2006-01-02\"}}",
       "source_ami_filter": {
         "filters": {
         "virtualization-type": "hvm",
@@ -51,7 +51,7 @@
       "shutdown_behavior" : "stop",
 
       "run_tags"  : {
-        "Name" : "CentOS7-AP-TEST-p38-{{isotime \"2006-01-02\"}}",
+        "Name" : "CentOS7-AP-TEST-pe-{{isotime \"2006-01-02\"}}",
         "Cost Center" : "N/A",
         "Customer Facing" : "No",
         "Environment" : "QA",
@@ -63,7 +63,7 @@
       },
 
       "tags"  : {
-        "Name" : "CentOS7-AP-TEST-p38-{{isotime \"2006-01-02\"}}",
+        "Name" : "CentOS7-AP-TEST-pe-{{isotime \"2006-01-02\"}}",
         "Cost Center" : "N/A",
         "Customer Facing" : "No",
         "Environment" : "QA",

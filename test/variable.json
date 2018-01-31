@@ -1,14 +1,14 @@
 {
-  "aws_access_key": "",
-  "aws_secret_key": "",
-  "vpc_id": "vpc-faeb5e9f",
-  "subnet_id": "subnet-004c2e3a",
-  "security_group": "sg-f5de4785",
-  "region": "us-east-1",
-  "availability_zone": "us-east-1e",
-  "keypair_name": "GICentosAMI_QA",
-  "privite_key_file": "packer-keys/GICentosAMI_QA",
-  "temporary_key_pair_name": "GICentosAMI_Test",
-  "iam_role" : "packer-iam-builds"
+  "aws_access_key" : "",
+  "aws_secret_key" : "",
+  "vpc_id" : "vpc-de6125bb",
+  "subnet_id" : "subnet-17ade53c",
+  "security_group" : "sg-8cafb6eb",
+  "region" : "us-east-1",
+  "availability_zone" : "us-east-1e",
+  "keypair_name" : "GICentosAMI_QA",
+  "privite_key_file" :  "packer-keys/GICentosAMI_QA.pem",
+  "temporary_key_pair_name" : "GICentosAMI_QA",
+  "iam_role" : "packer-iam-builds"  
 },
 
