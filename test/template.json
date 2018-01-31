@@ -84,18 +84,18 @@
   "provisioners": [
     {
       "type"  : "file",
-      "source"  : "scripts/client.json",
+      "source"  : "../scripts/client.json",
       "destination" : "~/client.json"
     },
     {
       "type"  : "file",
-      "source"  : "scripts/api.json",
+      "source"  : "../scripts/api.json",
       "destination" : "~/api.json"
     },
     {
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E {{ .Path }}",
       "type" : "shell",
-      "script" : "scripts/script-pe-new.sh"
+      "script" : "../scripts/script-pe-new.sh"
     }
   ]
 }
