@@ -30,7 +30,8 @@
         "owners": ["679593333241"],
         "most_recent": true
       },
-
+      
+      "ena_support" : true,
       "instance_type" : "t2.large",
       "launch_block_device_mappings"  : [
         {
