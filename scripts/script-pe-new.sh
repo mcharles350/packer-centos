@@ -69,6 +69,8 @@ curl -k 'https://puppet-mom.ap.org:8140/packages/current/install.bash' | sudo ba
 cd /tmp
 curl -k -O https://ctcaltsmps01.ap.org/Altiris/NS/NSCap/Bin/Unix/AgentInstall/Linux/x64/aex-bootstrap-linux
 chmod u+x aex-bootstrap-linux && echo "y;"|./aex-bootstrap-linux https://CTCALTSMPS01.ap.org
+echo 'RES_OPTIONS="timeout:2 attempts:5"' | sudo tee -a /etc/sysconfig/network-scripts/ifcfg-eth0
+echo 'options timeout:2 attempts:5' | sudo tee -a /etc/resolv.conf
 /sbin/service rsyslog stop
 /sbin/service auditd stop
 /bin/package-cleanup --oldkernels --count=1
