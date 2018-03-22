@@ -76,7 +76,6 @@
 
       "ami_name" : "CentOS7-AP-GOLD-pe-{{isotime \"2006-01-02\"}}",
       "ami_regions" : [
-          "us-west-2",
           "eu-west-1"
       ],
 
