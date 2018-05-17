@@ -1,12 +1,10 @@
 {
   "aws_access_key" : "",
   "aws_secret_key" : "",
-  "vpc_id" : "vpc-faeb5e9f",
-  "subnet_id" : "subnet-004c2e3a",
-  "security_group" : "sg-f5de4785",
+  "vpc_id" : "vpc-de6125bb",
+  "subnet_id" : "subnet-17ade53c",
   "region" : "us-east-1",
   "availability_zone" : "us-east-1e",
-  "keypair_name" : "GICentosAMI_QA",
-  "temporary_key_pair_name" : "GIAMI_QA"
+  "temporary_key_pair_name" : "packer-centos-ami"
 },
 
